@@ -12,18 +12,18 @@ public class TicTacToe {
         logger.info("Enter box number to select. Enjoy!\n");
 
         while (true) {
-            CreateBoard.showBoard(box);
+            LogicGame.showBoard(box);
 
-            if (WinnerCombination.choiceWinner(box, 'X')) {
-                WinnerResult.getWinner((byte) 1);
+            if (LogicGame.choiceWinner(box, 'X')) {
+                LogicGame.getWinner((byte) 1);
                 break;
             }
-            if (WinnerCombination.choiceWinner(box, 'O')) {
-                WinnerResult.getWinner((byte) 2);
+            if (LogicGame.choiceWinner(box, 'O')) {
+                LogicGame.getWinner((byte) 2);
                 break;
             }
-            if (!EmptyBoxAvailable.isEmptyBoxAvailable(box)){
-                WinnerResult.getWinner((byte) 3);
+            if (!LogicGame.isEmptyBoxAvailable(box)){
+                LogicGame.getWinner((byte) 3);
                break;
             }
             AnswerPlayer.getAnswerPlayer(box);

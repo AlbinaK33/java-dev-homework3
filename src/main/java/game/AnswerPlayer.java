@@ -17,8 +17,9 @@ public class AnswerPlayer {
                     box[input - 1] = 'X';
                     break;
                 }
-            } else
+            } else {
                 logger.info("Invalid input. Enter again.");
+            }
         }
     }
 }
